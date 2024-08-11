@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div
       name="about"
-      className="w-full  bg-gradient-to-b from-gray-800 to-black text-white py-10"
+      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -12,7 +12,7 @@ const About = () => {
             About
           </p>
         </div>
-        <p className="mt-10">
+        <p className="text-xl mt-20">
           Soy Emanuel, un desarrollador apasionado por crear soluciones
           eficientes y escalables. Me enfoco en diseñar y mantener aplicaciones
           robustas con un enfoque en la calidad y el rendimiento. Aquí
