@@ -143,14 +143,14 @@ const Skills = () => {
 
   return (
     <div
-      name="skills"
+      name="habilidades"
       className="bg-gradient-to-b from-gray-800 to-black w-full overflow-y-auto pt-16"
     >
       <div className="max-w-screen-lg h-full flex flex-col justify-center w-full p-4 mx-auto text-white">
     
         <div>
           <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
-            Skills
+            Habilidades
           </p>
           <p className="py-6">These are the technologies I've worked with</p>
         </div>

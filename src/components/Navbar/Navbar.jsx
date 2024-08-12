@@ -9,10 +9,10 @@ const Navbar = () => {
 
   const links = [
     { id: 1, link: "home" },
-    { id: 2, link: "about" },
-    { id: 3, link: "portfolio" },
-    { id: 4, link: "skills" },
-    { id: 5, link: "contact" },
+    { id: 2, link: "acerca de mi" },
+    { id: 3, link: "portafolio" },
+    { id: 4, link: "habilidades" },
+    { id: 5, link: "contactarme" },
   ];
   return (
     <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">

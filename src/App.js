@@ -8,13 +8,13 @@ import SocialLinks from "./components/Social/SocialLinks";
 
 function App() {
   return (
-    <div>
+    <div className="selection:bg-violet-500 selection:text-black text-white">
       <Navbar></Navbar>
-      <Home></Home>
+      <Home/>
       <About />
       <Portfolio />
       <Skills />
-      <Contact/>
+      <Contact />
       <SocialLinks></SocialLinks>
     </div>
   );
