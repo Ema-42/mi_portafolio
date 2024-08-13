@@ -28,12 +28,12 @@ const Home = () => {
         <div className="flex flex-col justify-center h-full">
           <h2 className="text-4xl sm:text-7xl  md:mt-0 md:text-5xl font-bold text-white pb-5">
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">
-              {`Hola!! `}
+              {`Hola!! Mi nombre es Emanuel `}
             </span>
             Soy Desarrollador de Software
           </h2>
           <p className="text-gray-500 py-10 max-w-md">
-            Mi nombre es{" "}
+            Mi nombre completo es{" "}
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">Emanuel Mario Chusgo Santos</span>, un
             desarrollador de software apasionado por crear soluciones
             eficientes. Me inclino por el desarrollo del lado del servidor, pero
@@ -55,8 +55,8 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div>
-          <img src={perfil} alt="me" className="mx-auto  w-2/3 md:w-2/3" />
+        <div className="">
+          <img src={perfil} alt="me" className="mx-auto  w-5/6 md:w-full   duration-300 hover:scale-125"/>
         </div>
       </div>
     </div>
