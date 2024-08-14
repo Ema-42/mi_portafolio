@@ -14,7 +14,11 @@ const Contact = () => {
         </div>
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img src={messageImg} className="mx-auto h-24 w-auto" />
+            <img
+              src={messageImg}
+              className="mx-auto h-24 w-auto"
+              alt="mensaje"
+            />
             <h2 className=" text-center text-2xl font-bold leading-9 tracking-tight text-white">
               Dejame un mensaje
             </h2>
@@ -95,9 +99,9 @@ const Contact = () => {
 
             <p className="mt-10 text-center text-sm text-gray-500">
               Me contactare pronto.{" "}
-              <a href="#" className="font-semibold leading-6 text-fuchsia-500">
+              <span className="font-semibold leading-6 text-fuchsia-500">
                 Gracias!!
-              </a>
+              </span>
             </p>
           </div>
         </div>
