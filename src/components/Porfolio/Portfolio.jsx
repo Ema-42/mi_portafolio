@@ -8,6 +8,12 @@ import appVentas from "../../assets/portafolio/appVentasC.jpg";
 import appTareas from "../../assets/portafolio/appTareas.jpg";
 import appTablero from "../../assets/portafolio/appTabero.jpg";
 
+//lenguajes
+
+import { FaVuejs } from "react-icons/fa6";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiTypescript } from "react-icons/si";
+
 const Portfolio = () => {
   const my_projects = [
     {
@@ -63,7 +69,7 @@ const Portfolio = () => {
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Portafolio
           </p>
-          <p className="py-6">Aquí hay algunos de mis proyecto</p>
+          <p className="py-6">Aquí hay algunos de mis proyectos</p>
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
@@ -72,12 +78,25 @@ const Portfolio = () => {
               <img
                 src={src}
                 alt=""
-                className="w-80 h-40 object-cover rounded-md duration-200 hover:scale-105"
+                className="w-80 h-40 object-cover rounded-ss-md rounded-se-md duration-200 hover:scale-105"
               />
+
+              <div className="bg-gray-800 h-10 flex justify-center items-center  space-x-2 py-6">
+                <p className="text-3xl flex text-yellow-300">
+                  <IoLogoJavascript />
+                </p>
+                <p className="text-3xl flex  text-emerald-500">
+                  <FaVuejs />
+                </p>
+                <p className="text-3xl flex  text-blue-400">
+                  <SiTypescript />
+                </p>
+              </div>
+
               <div className="flex items-center justify-center">
                 <button
-                  className="w-1/2 px-6 py-3 m-4 duration-200 
-                hover:scale-105 hover:rounded-md hover:bg-gradient-to-r hover:from-gray-600 hover:to-gray-400 cursor-pointer"
+                  className="w-1/2  px-3 py-1.5 m-4 duration-200 rounded-md
+                 hover:rounded-md hover:bg-gradient-to-r hover:from-gray-600 hover:to-gray-400 cursor-pointer"
                 >
                   Web
                 </button>
@@ -85,11 +104,10 @@ const Portfolio = () => {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-1/2 px-6 py-3 m-4 duration-200
+                  className="w-1/2 px-3 py-1.5 m-4 duration-200
                 border-2
-                rounded-md border-violet-500 hover:scale-105
-                hover:rounded-md hover:border-none
-                hover:bg-gradient-to-r hover:from-violet-500 hover:to-fuchsia-500 cursor-pointer"
+                rounded-md border-violet-500 
+                hover:bg-gradient-to-r hover:from-violet-500 hover:to-fuchsia-500 cursor-pointer text-center"
                 >
                   Código
                 </a>

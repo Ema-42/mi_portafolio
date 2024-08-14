@@ -2,6 +2,12 @@ import React from "react";
 import perfil from "../../assets/photo.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { SiGoogledocs } from "react-icons/si";
+//redes
+import { FaWhatsapp } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const Home = () => {
   const handleDownload = () => {
@@ -32,17 +38,61 @@ const Home = () => {
             </span>
             Soy Desarrollador de Software
           </h2>
-          <p className="text-gray-500 py-10 max-w-md">
+          <p className="text-gray-500 pt-10 pb-5 max-w-md">
             Mi nombre completo es{" "}
-            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">Emanuel Mario Chusgo Santos</span>, un
-            desarrollador de software apasionado por crear soluciones
-            eficientes. Me inclino por el desarrollo del lado del servidor, pero
-            tengo una fuerte afinidad por el lado del cliente, siempre buscando
-            el mejor rendimiento posible, garantizando siempre la seguridad.
+            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">
+              Emanuel Mario Chusgo Santos
+            </span>
+            , un desarrollador de software apasionado por crear soluciones
+            eficientes, garantizando siempre la seguridad. Me inclino por el
+            desarrollo del lado del servidor, pero tambien afinidad por el lado
+            del cliente.
           </p>
           <div>
+            <div className="flex space-x-4 my-4 py-2  text-2xl pb-5 pl-3 hover:shadow-sm ">
+              <a
+                href="https://wa.link/90qbef"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" hover:text-green-500 transition duration-300"
+              >
+                <FaWhatsapp />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/emanuel-mario-chusgo-santos-93189b161"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" hover:text-cyan-400 transition duration-300"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="https://www.instagram.com/emanuel_162_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" hover:text-pink-500 transition duration-300"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://www.facebook.com/emanuel.chusgosantos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" hover:text-blue-700 transition duration-300"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://github.com/Ema-42"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+            </div>
+
             <button
-              className=" group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-violet-500 to-fuchsia-500 cursor-pointer"
+              className=" group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-violet-500 to-fuchsia-500 cursor-pointer "
               onClick={handleDownload}
             >
               <SiGoogledocs /> <span className="ml-2">Descargar CV</span>
@@ -56,7 +106,11 @@ const Home = () => {
           </div>
         </div>
         <div className="">
-          <img src={perfil} alt="me" className="mx-auto  w-5/6 md:w-full   duration-300 hover:scale-125"/>
+          <img
+            src={perfil}
+            alt="me"
+            className="mx-auto  w-5/6 md:w-full   duration-300 hover:scale-125"
+          />
         </div>
       </div>
     </div>
