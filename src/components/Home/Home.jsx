@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import perfil from "../../assets/photo.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { SiGoogledocs } from "react-icons/si";
@@ -8,8 +8,21 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { IoCopyOutline } from "react-icons/io5";
+import { FaCheckCircle } from "react-icons/fa";
 
 const Home = () => {
+  const email = "emanuel.mario.chusgo.santos@gmail.com";
+  const [showAlert, setShowAlert] = useState(false);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(email);
+    setShowAlert(true);
+
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 700);
+  };
   const handleDownload = () => {
     const userConfirmed = window.confirm(
       "¿Deseas descargar el archivo CV_EMANUEL_CHUSGO.pdf?"
@@ -28,16 +41,24 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="pt-40 pb-20 w-full bg-gradient-to-b from-black via-black to-gray-800 "
+      className="pt-28 pb-5 sm:pb-20 w-full bg-gradient-to-b from-black via-black to-gray-800 "
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-7xl  md:mt-0 md:text-5xl font-bold text-white pb-5">
+          <h2 className="text-4xl text-center  sm:text-7xl sm:text-left  md:mt-0 md:text-5xl font-bold text-white pb-5">
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">
-              {`Hola!! Mi nombre es Emanuel `}
+              {`Hola!! Mi nombre es Emanuel, `}
             </span>
             Soy Desarrollador de Software
           </h2>
+
+          <div className="inline-flex mx-auto sm:mx-0 justify-center items-center bg-green-900 rounded-full px-4 text-green-300 py-0.5 w-60">
+            <FaCheckCircle />
+            <span className="text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full dark:text-green-300 ">
+              Disponible para trabajar
+            </span>
+          </div>
+
           <p className="text-gray-500 pt-10 pb-5 max-w-md">
             Mi nombre completo es{" "}
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">
@@ -48,8 +69,22 @@ const Home = () => {
             desarrollo del lado del servidor, pero tambien afinidad por el lado
             del cliente.
           </p>
+
+          <div className="flex items-center space-x-2   h-6">
+            <span className="bg-green-100 text-green-800 text-sm font-medium px-2 py-0.5 rounded dark:bg-gray-800 dark:text-slate-400 border border-slate-400 h-full flex items-center">
+              <a href={`mailto:${email}`}>{email}</a>
+            </span>
+            <button
+              onClick={copyToClipboard}
+              className="bg-gray-800 text-slate-400 font-medium px-2 py-0.5 rounded hover:bg-gray-700 border border-slate-400 h-full flex items-center"
+            >
+              <IoCopyOutline />
+            </button>
+            {showAlert && <p className="text-sm">Copiado 👌!</p>}
+          </div>
+
           <div>
-            <div className="flex space-x-4 my-4 py-2  text-2xl pb-5 pl-3 hover:shadow-sm ">
+            <div className="flex space-x-4 my-4 py-2  text-2xl pb-5 pl-3 hover:shadow-sm text-slate-400 ">
               <a
                 href="https://wa.link/90qbef"
                 target="_blank"
@@ -109,7 +144,7 @@ const Home = () => {
           <img
             src={perfil}
             alt="me"
-            className="mx-auto  w-5/6 md:w-full   duration-300 hover:scale-125"
+            className="mx-auto  pt-8  w-2/3 md:w-full   duration-300 hover:scale-110"
           />
         </div>
       </div>
