@@ -41,7 +41,7 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="pt-28 pb-5 sm:pb-20 w-full bg-gradient-to-b from-black via-black to-gray-800 "
+      className="pt-24 pb-5 sm:pb-20 w-full bg-gradient-to-b from-black via-black to-gray-800 "
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">
@@ -59,7 +59,7 @@ const Home = () => {
             </span>
           </div>
 
-          <p className="text-gray-500 pt-10 pb-5 max-w-md">
+          <p className="text-gray-500 pt-8 pb-5 max-w-md">
             Mi nombre completo es{" "}
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">
               Emanuel Mario Chusgo Santos
