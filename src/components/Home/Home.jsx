@@ -80,8 +80,12 @@ const Home = () => {
             >
               <IoCopyOutline />
             </button>
-            {showAlert && <p className="text-sm">Copiado 👌!</p>}
           </div>
+            <div className="flex pt-2 justify-center sm:justify-start">
+              {showAlert && <p className="text-sm block">Copiado 👌</p>}
+            </div>
+
+
 
           <div>
             <div className="flex space-x-4 my-4 py-2  text-2xl pb-5 pl-3 hover:shadow-sm text-slate-400 ">
