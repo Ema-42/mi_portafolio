@@ -8,11 +8,7 @@ import appVentas from "../../assets/portafolio/appVentasC.jpg";
 import appTareas from "../../assets/portafolio/appTareas.jpg";
 import appTablero from "../../assets/portafolio/appTabero.jpg";
 
-//lenguajes
-
-import { FaVuejs } from "react-icons/fa6";
-import { IoLogoJavascript } from "react-icons/io5";
-import { SiTypescript } from "react-icons/si";
+ 
 
 const Portfolio = () => {
   const my_projects = [
@@ -20,45 +16,60 @@ const Portfolio = () => {
       id: 1,
       src: appApi,
       url: "https://github.com/Ema-42/react_practica",
-      name: "Aplicación de clima y peliculas (API) ",
+      name: "Aplicación de clima y peliculas (API)",
+      tools: ["Javascript", "React", "CSS"],
+      resume: "Consulta el clima y películas usando APIs.",
     },
     {
       id: 2,
       src: appProducccion,
       url: "https://github.com/Ema-42/sis_produccion_de_ropa",
       name: "App de producción de ropa",
+      tools: ["PHP", "Laravel", "Bootstrap"],
+      resume: "Gestiona la producción de prendas de vestir.",
     },
     {
       id: 3,
       src: appCompras,
-      ulr: "https://github.com/Ema-42/carrito_compras_app",
+      url: "https://github.com/Ema-42/carrito_compras_app",
       name: "Aplicación de compras (API)",
+      tools: ["Javascript", "React", "CSS"],
+      resume: "Carrito de compras con integración API.",
     },
     {
       id: 4,
       src: appVentas,
       url: "https://github.com/Ema-42/SisRestaurante",
       name: "Aplicación de ventas de un local comercial",
+      tools: ["C#"],
+      resume: "Sistema de ventas para locales comerciales.",
     },
     {
       id: 5,
       src: appPropina,
       url: "https://github.com/Ema-42/split-bill",
       name: "Aplicación para gestionar el pago de propina",
+      tools: ["Javascript", "Vue", "CSS"],
+      resume: "Calcula y divide la propina fácilmente.",
     },
     {
       id: 6,
       src: appTareas,
       url: "https://github.com/Ema-42/app-todo",
       name: "Aplicación de tareas",
+      tools: ["Javascript", "Vue", "CSS"],
+      resume: "Gestiona y organiza tus tareas diarias.",
     },
     {
-      id: 6,
+      id: 7,
       src: appTablero,
       url: "https://github.com/Ema-42/app-tablero-kanban",
       name: "Aplicación tablero kanban",
+      tools: ["Javascript", "Vue", "CSS"],
+      resume: "Organiza tareas con un tablero Kanban.",
     },
   ];
+
   return (
     <div
       name="portafolio"
@@ -73,7 +84,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {my_projects.map(({ id, src, url, name }) => (
+          {my_projects.map(({ id, src, url, name, tools, resume }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
@@ -81,16 +92,21 @@ const Portfolio = () => {
                 className="w-80 h-40 object-cover rounded-ss-md rounded-se-md duration-200 hover:scale-105"
               />
 
-              <div className="bg-gray-800 h-10 flex justify-center items-center  space-x-2 py-6">
-                <p className="text-3xl flex text-yellow-300">
-                  <IoLogoJavascript />
+              <div className="  h-10 flex  justify-center items-center  py-6 text-sm">
+                <div className="flex space-x-2  ">
+                  {tools.map((item) => (
+                    <p className="text-gray-300  bg-gray-800 px-2  rounded-full flex">
+                      {item}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="px-4 pb-6 pt-4">
+                <p className="flex space-x-2 text-violet-500 font-bold text-xl">
+                  {name}
                 </p>
-                <p className="text-3xl flex  text-emerald-500">
-                  <FaVuejs />
-                </p>
-                <p className="text-3xl flex  text-blue-400">
-                  <SiTypescript />
-                </p>
+                <p className="text-gray-500 text-sm pt-3">{resume}</p>
               </div>
 
               <div className="flex items-center justify-center">
