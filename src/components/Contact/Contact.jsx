@@ -1,8 +1,10 @@
 import React from "react";
 import messageImg from "../../assets/message.png";
+ 
 const Contact = () => {
   return (
     <div
+    id="div-contact"
       name="contactarme"
       className="w-full bg-gradient-to-b from-black to-gray-800 p-4 text-white pt-10"
     >
@@ -111,3 +113,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

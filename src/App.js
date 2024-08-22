@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="selection:bg-violet-500 selection:text-black text-white">
       <Navbar></Navbar>
-      <Home/>
+      <Home />
       <About />
       <Portfolio />
       <Skills />

@@ -7,8 +7,7 @@ import appPropina from "../../assets/portafolio/appPropina.jpg";
 import appVentas from "../../assets/portafolio/appVentasC.jpg";
 import appTareas from "../../assets/portafolio/appTareas.jpg";
 import appTablero from "../../assets/portafolio/appTabero.jpg";
-
- 
+import appAuthUser from "../../assets/portafolio/app_auth-user.jpg";
 
 const Portfolio = () => {
   const my_projects = [
@@ -68,6 +67,15 @@ const Portfolio = () => {
       tools: ["Javascript", "Vue", "CSS"],
       resume: "Organiza tareas con un tablero Kanban.",
     },
+    {
+      id: 8,
+      src: appAuthUser,
+      url: "https://github.com/Ema-42/node-js-user-auth",
+      name: "Aplicación de autenticacion de usuarios",
+      tools: ["Javascript", "JWT", "CSS"],
+      resume:
+        "Crear usuario y loguerse con un sistema de autenticación de JWT.",
+    },
   ];
 
   return (
@@ -83,16 +91,21 @@ const Portfolio = () => {
           <p className="py-6">Aquí hay algunos de mis proyectos</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+        <div className="grid px-5 sm:grid-cols-2 md:grid-cols-3 gap-8  sm:px-0 ">
           {my_projects.map(({ id, src, url, name, tools, resume }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
-              <img
-                src={src}
-                alt=""
-                className="w-80 h-40 object-cover rounded-ss-md rounded-se-md duration-200 hover:scale-105"
-              />
+            <div
+              key={id}
+              className="shadow-md shadow-gray-700 rounded-lg bg-[#151C25]  flex flex-col justify-between h-full"
+            >
+              <div>
+                <img
+                  src={src}
+                  alt=""
+                  className="w-full h-40 object-cover rounded-ss-md rounded-se-md duration-200 hover:scale-105"
+                />
+              </div>
 
-              <div className="  h-10 flex  justify-center items-center  py-6 text-sm">
+              <div className="  h-10 flex  justify-center items-center  py-6 text-sm ">
                 <div className="flex space-x-2  ">
                   {tools.map((item) => (
                     <p className="text-gray-300  bg-gray-800 px-2  rounded-full flex">
@@ -102,14 +115,14 @@ const Portfolio = () => {
                 </div>
               </div>
 
-              <div className="px-4 pb-6 pt-4">
+              <div className="px-4 pb-6 pt-4 flex-grow">
                 <p className="flex space-x-2 text-violet-500 font-bold text-xl">
                   {name}
                 </p>
                 <p className="text-gray-500 text-sm pt-3">{resume}</p>
               </div>
 
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center  ">
                 <button
                   className="w-1/2  px-3 py-1.5 m-4 duration-200 rounded-md
                  hover:rounded-md hover:bg-gradient-to-r hover:from-gray-600 hover:to-gray-400 cursor-pointer"
