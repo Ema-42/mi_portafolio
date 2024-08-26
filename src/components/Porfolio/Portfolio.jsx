@@ -14,7 +14,7 @@ const Portfolio = () => {
     {
       id: 1,
       src: appApi,
-      url: "https://github.com/Ema-42/react_practica",
+      url: "https://github.com/Ema-42/app-clima-peliculas-api",
       name: "Aplicación de clima y peliculas (API)",
       tools: ["Javascript", "React", "CSS"],
       resume: "Consulta el clima y películas usando APIs.",
