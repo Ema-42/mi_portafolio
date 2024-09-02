@@ -45,7 +45,7 @@ const Home = () => {
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl text-center  sm:text-7xl sm:text-left  md:mt-0 md:text-5xl font-bold text-white pb-5">
+          <h2 className="text-4xl text-center  sm:text-7xl sm:text-left  md:mt-10 md:text-6xl font-bold text-white pb-5">
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">
               {`Hola!! Mi nombre es Emanuel, `}
             </span>
@@ -59,7 +59,7 @@ const Home = () => {
             </span>
           </div>
 
-          <p className="text-gray-500 pt-8 pb-5 max-w-md">
+          <p className="text-gray-400 pt-12 pb-6 max-w-md md:text-lg">
             Mi nombre completo es{" "}
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">
               Emanuel Mario Chusgo Santos
@@ -71,7 +71,7 @@ const Home = () => {
           </p>
 
           <div className="flex items-center space-x-2   h-6">
-            <span className="bg-green-100 text-green-800 text-sm font-medium px-2 py-0.5 rounded dark:bg-gray-800 dark:text-slate-400 border border-slate-400 h-full flex items-center">
+            <span className="text-sm md:text-lg  font-medium px-2 py-0.5 rounded bg-gray-800 text-slate-400 border border-slate-400 h-full flex items-center">
               <a href={`mailto:${email}`}>{email}</a>
             </span>
             <button

@@ -8,12 +8,14 @@ import appVentas from "../../assets/portafolio/appVentasC.jpg";
 import appTareas from "../../assets/portafolio/appTareas.jpg";
 import appTablero from "../../assets/portafolio/appTabero.jpg";
 import appAuthUser from "../../assets/portafolio/app_auth-user.jpg";
+import Carrusel from "../Carrusel/Carrusel";
 
 const Portfolio = () => {
   const my_projects = [
     {
       id: 1,
       src: appApi,
+      images:["../../assets/portafolio/appTabero.jpg","../../assets/portafolio/appTareas.jpg"],
       url: "https://github.com/Ema-42/app-clima-peliculas-api",
       name: "Aplicación de clima y peliculas (API)",
       tools: ["Javascript", "React", "CSS"],
@@ -83,6 +85,7 @@ const Portfolio = () => {
       name="portafolio"
       className="bg-gradient-to-b from-black to-gray-800 w-full text-white  pt-10 "
     >
+
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
@@ -92,17 +95,18 @@ const Portfolio = () => {
         </div>
 
         <div className="grid px-5 sm:grid-cols-2 md:grid-cols-3 gap-8  sm:px-0 ">
-          {my_projects.map(({ id, src, url, name, tools, resume }) => (
+          {my_projects.map(({ id, src, url, name, tools, resume,images }) => (
             <div
               key={id}
               className="shadow-md shadow-gray-700 rounded-lg bg-[#151C25]  flex flex-col justify-between h-full"
             >
-              <div>
-                <img
+              <div >
+{/*                 <img
                   src={src}
                   alt=""
                   className="w-full h-40 object-cover rounded-ss-md rounded-se-md duration-200 hover:scale-105"
-                />
+                /> */}
+                <Carrusel images= {images}/>
               </div>
 
               <div className="  h-10 flex  justify-center items-center  py-6 text-sm ">
