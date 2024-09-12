@@ -52,7 +52,7 @@ const SocialLinks = () => {
           <li
             key={id}
             className={
-              "flex justify-between items-center w-40 h-14 px-4  ml-[-100px] hover:ml-[-10px] duration-200 bg-gray-500" +
+              "flex justify-between items-center w-40 h-14 px-4  ml-[-100px] hover:ml-[-10px] duration-200 bg-gray-900  " +
               " " +
               style
             }
@@ -63,7 +63,6 @@ const SocialLinks = () => {
               download={download}
               target="_blank"
               rel="noreferrer"
-
             >
               {child}
             </a>

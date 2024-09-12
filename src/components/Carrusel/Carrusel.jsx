@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 const Carrusel = ({ images = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const startXRef = useRef(null); // Para guardar la posición inicial del tacto
+  const isDraggingRef = useRef(false); // Para controlar si se está arrastrando
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -15,8 +17,36 @@ const Carrusel = ({ images = [] }) => {
     );
   };
 
+  const handleTouchStart = (event) => {
+    startXRef.current = event.touches[0].clientX; // Guardar la posición inicial del tacto
+    isDraggingRef.current = true; // Marcar que se está arrastrando
+  };
+
+  const handleTouchMove = (event) => {
+    if (!isDraggingRef.current) return; // Solo hacer algo si se está arrastrando
+
+    const distance = event.touches[0].clientX - startXRef.current; // Calcular la distancia arrastrada
+    if (distance > 50) {
+      prevSlide(); // Arrastre hacia la derecha, ir a la diapositiva anterior
+      startXRef.current = event.touches[0].clientX; // Restablecer la posición inicial
+    } else if (distance < -50) {
+      nextSlide(); // Arrastre hacia la izquierda, ir a la diapositiva siguiente
+      startXRef.current = event.touches[0].clientX; // Restablecer la posición inicial
+    }
+  };
+
+  const handleTouchEnd = () => {
+    isDraggingRef.current = false; // Marcar que el arrastre ha terminado
+  };
+
   return (
-    <div id="controls-carousel" className="relative w-full overflow-hidden ">
+    <div
+      id="controls-carousel"
+      className="relative w-full overflow-hidden"
+      onTouchStart={handleTouchStart} // Iniciar el arrastre
+      onTouchMove={handleTouchMove} // Mover la diapositiva durante el arrastre
+      onTouchEnd={handleTouchEnd} // Terminar el arrastre
+    >
       <div className="relative h-60 sm:h-56">
         {images.map((image, index) => (
           <div

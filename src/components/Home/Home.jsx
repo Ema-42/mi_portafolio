@@ -10,6 +10,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoCopyOutline } from "react-icons/io5";
 import { FaCheckCircle } from "react-icons/fa";
+import TextEffect from "../TextEffect";
 
 const Home = () => {
   const email = "emanuel.mario.chusgo.santos@gmail.com";
@@ -43,23 +44,24 @@ const Home = () => {
       name="home"
       className="pt-24 pb-5 sm:pb-20 w-full bg-gradient-to-b from-black via-black to-gray-800 "
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl text-center  sm:text-7xl sm:text-left  md:mt-10 md:text-6xl font-bold text-white pb-5">
-            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-start justify-center h-full px-4 md:flex-row">
+        <div className="flex flex-col justify-center h-full flex-grow md:basis-3/5">
+          <h2 className="text-4xl text-center  sm:text-7xl sm:text-left  md:mt-4 md:text-5xl font-bold text-white pb-5">
+            {/*    <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">
               {`Hola!! Mi nombre es Emanuel, `}
-            </span>
+            </span> */}
+            <TextEffect text="Hola!! Mi nombre es Emanuel," speed={80} />
             Soy Desarrollador de Software
           </h2>
 
-          <div className="inline-flex mx-auto sm:mx-0 justify-center items-center bg-green-900 rounded-full px-4 text-green-300 py-0.5 w-60">
+          <div className="inline-flex mx-auto sm:mx-0 justify-center items-center bg-green-900 rounded-full px-4 text-green-200 py-0.5 w-60">
             <FaCheckCircle />
-            <span className="text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full dark:text-green-300 ">
+            <span className="text-green-300 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full dark:text-green-300 ">
               Disponible para trabajar
             </span>
           </div>
 
-          <p className="text-gray-400 pt-12 pb-6 max-w-md md:text-lg">
+          <p className="text-gray-400 pt-5 pb-6 max-w-md md:text-lg">
             Mi nombre completo es{" "}
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">
               Emanuel Mario Chusgo Santos
@@ -81,19 +83,16 @@ const Home = () => {
               <IoCopyOutline />
             </button>
           </div>
-            <div className="flex pt-2 justify-center sm:justify-start">
-              {showAlert && <p className="text-sm block">Copiado 👌</p>}
-            </div>
-
-
-
+          <div className="flex pt-2 justify-center sm:justify-start">
+            {showAlert && <p className="text-sm block">Copiado 👌</p>}
+          </div>
           <div>
-            <div className="flex space-x-4 my-4 py-2  text-2xl pb-5 pl-3 hover:shadow-sm text-slate-400 ">
+            <div className="flex space-x-4 my-4 py-1  text-2xl pb-5 pl-3 hover:shadow-sm text-slate-400 ">
               <a
                 href="https://wa.link/90qbef"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" hover:text-green-500 transition duration-300"
+                className=" hover:text-white "
               >
                 <FaWhatsapp />
               </a>
@@ -101,7 +100,7 @@ const Home = () => {
                 href="https://www.linkedin.com/in/emanuel-mario-chusgo-santos-93189b161"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" hover:text-cyan-400 transition duration-300"
+                className=" hover:text-white "
               >
                 <FaLinkedinIn />
               </a>
@@ -109,7 +108,7 @@ const Home = () => {
                 href="https://www.instagram.com/emanuel_162_/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" hover:text-pink-500 transition duration-300"
+                className=" hover:text-white "
               >
                 <FaInstagram />
               </a>
@@ -117,7 +116,7 @@ const Home = () => {
                 href="https://www.facebook.com/emanuel.chusgosantos/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" hover:text-blue-700 transition duration-300"
+                className=" hover:text-white "
               >
                 <FaFacebookF />
               </a>
@@ -125,13 +124,14 @@ const Home = () => {
                 href="https://github.com/Ema-42"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="hover:text-white "
               >
                 <FaGithub />
               </a>
             </div>
 
             <button
-              className=" group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-violet-500 to-fuchsia-500 cursor-pointer "
+              className=" group text-white w-fit px-6 py-2 my-2 flex items-center rounded-md bg-gradient-to-r from-violet-500 to-fuchsia-500 cursor-pointer "
               onClick={handleDownload}
             >
               <SiGoogledocs /> <span className="ml-2">Descargar CV</span>
@@ -144,7 +144,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="">
+        <div className=" md:basis-2/5">
           <img
             src={perfil}
             alt="me"
