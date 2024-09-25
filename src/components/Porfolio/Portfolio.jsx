@@ -11,6 +11,11 @@ import appImage from "../../assets/portafolio/image.jpg";
 import appPortafolio from "../../assets/portafolio/appPortafolio.png";
 import appPortafolio2 from "../../assets/portafolio/appPortafolio2.png";
 import appAuthUser from "../../assets/portafolio/app_auth-user.jpg";
+import appTodo1 from "../../assets/portafolio/appTodo1.png";
+import appTodo2 from "../../assets/portafolio/appTodo2.png";
+import appTodo3 from "../../assets/portafolio/appTodo3.png";
+import appTodo4 from "../../assets/portafolio/appTodo4.png";
+import appTodo5 from "../../assets/portafolio/appTodo5.png";
 
 import CarruselPortafolio from "../Carrusel/CarruselPortafolio";
 
@@ -97,7 +102,7 @@ const Portfolio = () => {
     },
     {
       id: 9,
-      src: appAuthUser,
+      src: appPortafolio,
       images: [appPortafolio, appImage, appPortafolio2],
       repositorio: "https://github.com/Ema-42/mi_portafolio",
       web: "https://emanuel-chusgo.netlify.app/",
@@ -105,6 +110,17 @@ const Portfolio = () => {
       tools: ["Javascript", "React", "TailWInd"],
       resume:
         "Página Web donde se encuentra plasmado mis conocimientos y proyectos.",
+    },
+    {
+      id: 10,
+      src: appTodo1,
+      images: [appTodo1, appTodo2, appTodo3,appTodo4,appTodo5],
+      repositorio: "https://github.com/Ema-42/todo-app-back-nest",
+      web: "https://todo-app-auth-emanuel.netlify.app/",
+      name: "Todo App",
+      tools: ["TypeScript", "React", "TailWInd","NextJs"],
+      resume:
+        "Aplicacion de tareas, gestiona todas tus tareas. Autenticacion de usuario y roles (crea y gestiona usuarios)",
     },
   ];
 
