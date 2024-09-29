@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Portfolio from "./components/Porfolio/Portfolio";
 import Skills from "./components/Skills/Skills";
 import SocialLinks from "./components/Social/SocialLinks";
+import TimeLineEducation from "./components/TimeLineEducation/TimeLineEducation";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar></Navbar>
       <Home />
       <About />
+      <TimeLineEducation/>
       <Portfolio />
       <Skills />
       <Contact />
