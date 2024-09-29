@@ -1,5 +1,5 @@
 import React from "react";
-
+import './timeline.css'
 const datosEducativos = [
   {
     año: "2012-2017",
@@ -43,18 +43,13 @@ const datosEducativos = [
       "CI/CD (Integración continua y entrega continua)",
       "Monitorización y logging",
       "Gestión de contenedores con Docker",
-    ],
-    actividades: [
-      "Pipelines CI/CD",
-      "Configuración de infraestructuras en la nube",
-      "Despliegue automatizado de aplicaciones",
-    ],
+    ]
   },
 ];
 
 export default function TimeLineEducation() {
   return (
-    <div className=" mx-auto px-4 py-8  bg-gradient-to-b from-gray-800 to-black">
+    <div className=" mx-auto px-4 py-4  bg-gradient-to-b from-gray-800 to-black">
       <h1 className="text-3xl font-bold mb-8 text-center dark:text-white">
         Formación Académica
       </h1>
@@ -74,7 +69,7 @@ export default function TimeLineEducation() {
 
             {/* Tarjeta */}
             <div
-              className={ ` w-[95%] md:w-5/12 ml-12 md:ml-0 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl ${
+              className={ `tarjeta-timeline w-[85%] md:w-5/12 ml-12 md:ml-0 p-4 bg-slate-100 dark:bg-gray-800 rounded-lg shadow-xl ${
                 index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"
               }`}
             >
@@ -90,7 +85,7 @@ export default function TimeLineEducation() {
                   <h3 className="font-bold text-gray-800 dark:text-white text-xl mb-1 md:mb-0">
                     {item.título}
                   </h3>
-                  <h4 className="font-bold text-blue-600 dark:text-blue-400 text-sm">
+                  <h4 className="font-bold text-violet-500 dark:text-violet-400 text-sm">
                     {item.año}
                   </h4>
                   <p className="mb-2 text-sm font-semibold text-gray-700 dark:text-gray-300 unde">

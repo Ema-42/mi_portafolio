@@ -1,0 +1,11 @@
+.tarjeta-timeline {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgb(216, 216, 216),
+    rgba(207, 207, 207, 0.816) 1px,
+    transparent 1px,
+    transparent 6px
+  );
+  background-size: 4px 4px;
+  
+}
