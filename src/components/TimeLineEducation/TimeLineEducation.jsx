@@ -30,7 +30,7 @@ const datosEducativos = [
     ],
   },
   {
-    año: "2017-2018",
+    año: "2024-2024",
     título: "Programa de Diplomado",
     escudo: "/assets/cepi.png",
     institución: "Centro de Estudios de Posgrado e Investigación",
