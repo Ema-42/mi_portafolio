@@ -6,8 +6,7 @@ const datosEducativos = [
     título: "Escuela Secundaria",
     escudo: "/assets/lion.png",
     institución: "Unidad Educativa Club de Leones II",
-    descripción:
-      "Complete y adquiri conocimientos educativos de nivel secundario.",
+    descripción: "Complete y adquiri conocimientos educativos de nivel secundario.",
     logros: ["Mejor promedio Bachiller"],
   },
   {
@@ -30,7 +29,7 @@ const datosEducativos = [
     ],
   },
   {
-    año: "2024-2024",
+    año: "2023-2024",
     título: "Programa de Diplomado",
     escudo: "/assets/cepi.png",
     institución: "Centro de Estudios de Posgrado e Investigación",
