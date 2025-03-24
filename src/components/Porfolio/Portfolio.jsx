@@ -16,6 +16,14 @@ import appTodo2 from "../../assets/portafolio/appTodo2.png";
 import appTodo3 from "../../assets/portafolio/appTodo3.png";
 import appTodo4 from "../../assets/portafolio/appTodo4.png";
 import appTodo5 from "../../assets/portafolio/appTodo5.png";
+import appPOS1 from "../../assets/portafolio/1.png";
+import appPOS2 from "../../assets/portafolio/2.png";
+import appPOS3 from "../../assets/portafolio/3.png";
+import appPOS4 from "../../assets/portafolio/4.png";
+import appPOS5 from "../../assets/portafolio/5.png";
+import appPOS6 from "../../assets/portafolio/6.png";
+import appPOS7 from "../../assets/portafolio/7.png";
+import appPOS8 from "../../assets/portafolio/8.png";
 
 import CarruselPortafolio from "../Carrusel/CarruselPortafolio";
 
@@ -122,12 +130,23 @@ const Portfolio = () => {
       resume:
         "Aplicacion de tareas, gestiona todas tus tareas. Autenticacion de usuario y roles (crea y gestiona usuarios)",
     },
+    {
+      id: 11,
+      src: appPOS1,
+      images: [appPOS1,appPOS2,appPOS3,appPOS4,appPOS5,appPOS6,appPOS7,appPOS8],
+      repositorio: "https://github.com/Ema-42/punto_de_ventas_app_electron",
+      web: null,
+      name: "Sistema POS - Local de Comida",
+      tools: ["TypeScript", "Electron", "TailWInd","Vue","SQLite"],
+      resume:
+        "Sistema POS para gestionar ventas (con impresion de tickets), inventarios y pedidos en locales de comida.",
+    },
   ];
 
   return (
     <div
       name="portafolio"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white  pt-10 "
+      className="bg-gradient-to-b from-black to-gray-800 w-full text-white pt-10"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -137,27 +156,24 @@ const Portfolio = () => {
           <p className="py-6">Aquí hay algunos de mis proyectos</p>
         </div>
 
-        <div className="grid   sm:grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-5 sm:px-0  ">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-5 sm:px-0">
           {my_projects.map(
             ({ id, src, repositorio, name, tools, resume, images, web }) => (
               <div
                 key={id}
-                className="  shadow-md shadow-gray-700 rounded-lg bg-[#151C25]  flex flex-col justify-between h-full   "
+                className="shadow-md shadow-gray-700 rounded-lg bg-[#151C25] flex flex-col justify-between h-full"
               >
                 <div>
-                  {/*                 <img
-                  src={src}
-                  alt=""
-                  className="w-full h-40 object-cover rounded-ss-md rounded-se-md duration-200 hover:scale-105"
-                /> */}
-                  {/*  MI CARRUSEL PROPIO  <Carrusel images={images} /> */}
                   <CarruselPortafolio images={images} />
                 </div>
 
-                <div className="  h-10 flex  justify-center items-center  py-6 text-sm ">
-                  <div className="flex space-x-2  ">
-                    {tools.map((item) => (
-                      <p className="text-gray-300  bg-gray-800 px-2  rounded-full flex">
+                <div className=" flex justify-center items-center pt-4 text-sm">
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {tools.map((item, index) => (
+                      <p
+                        key={index}
+                        className="text-gray-300 bg-gray-800 px-2 rounded-full flex cursor-pointer hover:bg-gray-200 hover:text-gray-800"
+                      >
                         {item}
                       </p>
                     ))}
@@ -171,13 +187,12 @@ const Portfolio = () => {
                   <p className="text-gray-500 text-sm pt-3">{resume}</p>
                 </div>
 
-                <div className="flex items-center justify-center  ">
+                <div className="flex items-center justify-center">
                   <a
                     href={web}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-1/2  px-3 py-1.5 m-4 text-center duration-200  border-2 rounded-md border-violet-500
-                 hover:rounded-md hover:bg-gradient-to-r hover:from-violet-600 hover:to-fuchsia-400 cursor-pointer"
+                    className="w-1/2 px-3 py-1.5 m-4 text-center duration-200 border-2 rounded-md border-violet-500 hover:rounded-md hover:bg-gradient-to-r hover:from-violet-600 hover:to-fuchsia-400 cursor-pointer"
                   >
                     Web
                   </a>
@@ -185,10 +200,7 @@ const Portfolio = () => {
                     href={repositorio}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-1/2 px-3 py-1.5 m-4 duration-200
-                border-2
-                rounded-md border-slate-500 
-                hover:bg-gradient-to-r hover:from-slate-500 hover:to-slate-500 cursor-pointer text-center"
+                    className="w-1/2 px-3 py-1.5 m-4 duration-200 border-2 rounded-md border-slate-500 hover:bg-gradient-to-r hover:from-slate-500 hover:to-slate-500 cursor-pointer text-center"
                   >
                     Código
                   </a>

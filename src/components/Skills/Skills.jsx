@@ -10,11 +10,15 @@ import html from "../../assets/html.png";
 //bd
 import mysql from "../../assets/mysql.png";
 import mongo from "../../assets/mongo.png";
+import postgresql from "../../assets/postgressql.png";
+import sqlite from "../../assets/sqlite.png";
 //frameworks
 import vuejs from "../../assets/vue.png";
 import reactjs from "../../assets/react.png";
 import laravel from "../../assets/laravel.png";
 import nestjs from "../../assets/nest.png";
+import electron from "../../assets/electron.png";
+import net from "../../assets/net2.png";
 //oters
 import git from "../../assets/git.png";
 import trello from "../../assets/trello.png";
@@ -90,6 +94,20 @@ const Skills = () => {
       style: "shadow-green-500",
       type: "base de datos",
     },
+    {
+      id: 10,
+      src: sqlite,
+      title: "SQLite",  
+      style: "shadow-blue-200",
+      type: "base de datos",
+    },
+    {
+      id: 11,
+      src: postgresql,
+      title: "PostgreSQL",
+      style: "shadow-cyan-600",
+      type: "base de datos",
+    },
 
     // Frameworks
     {
@@ -118,6 +136,20 @@ const Skills = () => {
       src: nestjs,
       title: "NestJS",
       style: "shadow-red-600",
+      type: "framework",
+    },
+    {
+      id: 14,
+      src: net,
+      title: ".NET",
+      style: "shadow-indigo-600",
+      type: "framework",
+    },
+    {
+      id: 15,
+      src: electron,
+      title: "Electron",
+      style: "shadow-cyan-200",
       type: "framework",
     },
 
@@ -181,6 +213,22 @@ const Skills = () => {
           <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
             {techs
               .filter(({ type }) => type === "lenguaje")
+              .map(({ id, title, src, style }) => (
+                <div
+                  key={id}
+                  className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+                >
+                  <img src={src} alt={title} className="w-20 mx-auto" />
+                  <p className="mt-4">{title}</p>
+                </div>
+              ))}
+          </div>
+          <div className="flex justify-center items-center h-full">
+            <p className="text-1xl font-bold">Frameworks</p>
+          </div>
+          <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
+            {techs
+              .filter(({ type }) => type === "framework")
               .map(({ id, title, src, style }) => (
                 <div
                   key={id}
