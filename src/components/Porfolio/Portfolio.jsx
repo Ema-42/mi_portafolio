@@ -24,6 +24,16 @@ import appPOS5 from "../../assets/portafolio/5.png";
 import appPOS6 from "../../assets/portafolio/6.png";
 import appPOS7 from "../../assets/portafolio/7.png";
 import appPOS8 from "../../assets/portafolio/8.png";
+import appCuaderno from "../../assets/portafolio/appMiCuaderno.png";
+import appCuaderno2 from "../../assets/portafolio/appMiCuaderno2.png";
+import appCuaderno3 from "../../assets/portafolio/appMiCuaderno3.png";
+import appCuaderno4 from "../../assets/portafolio/appMiCuaderno4.png";
+import appCuaderno5 from "../../assets/portafolio/appMiCuaderno5.png";
+import appCuaderno6 from "../../assets/portafolio/appMiCuaderno6.png";
+import appCuaderno7 from "../../assets/portafolio/appMiCuaderno7.png";
+import appCuaderno8 from "../../assets/portafolio/appMiCuaderno8.png";
+import appCuaderno9 from "../../assets/portafolio/appMiCuaderno9.png";
+
 
 import CarruselPortafolio from "../Carrusel/CarruselPortafolio";
 
@@ -141,6 +151,17 @@ const Portfolio = () => {
       resume:
         "Sistema POS para gestionar ventas (con impresion de tickets), inventarios y pedidos en locales de comida.",
     },
+    {
+      id: 12,
+      src: appCuaderno,
+      images: [appCuaderno,appCuaderno2,appCuaderno3,appCuaderno4,appCuaderno5,appCuaderno6,appCuaderno7,appCuaderno8,appCuaderno9],
+      repositorio: "https://github.com/Ema-42/teamboard-client",
+      web: "https://teamboard-client.vercel.app/login",
+      name: "App tablero de actividades de equipo",
+      tools: ["TypeScript", "React", "TailWInd","Nestjs","Postgresql","OAuth","WebSockets"],
+      resume:
+        "Aplicación de tableros colaborativos con OAuth Google, gestion de tableros y miembros integrantes.",
+    },
   ];
 
   return (
@@ -172,7 +193,7 @@ const Portfolio = () => {
                     {tools.map((item, index) => (
                       <p
                         key={index}
-                        className="text-gray-300 bg-gray-800 px-2 rounded-full flex cursor-pointer hover:bg-gray-200 hover:text-gray-800"
+                        className="text-gray-300 bg-gray-700 px-2 rounded-full flex cursor-pointer hover:bg-gray-200 hover:text-gray-800"
                       >
                         {item}
                       </p>
