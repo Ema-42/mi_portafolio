@@ -24,6 +24,13 @@ import appPOS5 from "../../assets/portafolio/5.png";
 import appPOS6 from "../../assets/portafolio/6.png";
 import appPOS7 from "../../assets/portafolio/7.png";
 import appPOS8 from "../../assets/portafolio/8.png";
+import appQR from "../../assets/portafolio/appQR.png";
+import appQR2 from "../../assets/portafolio/appQR2.png";
+import appQR3 from "../../assets/portafolio/appQR3.png";
+import appQR4 from "../../assets/portafolio/appQR4.png";
+import appQR5 from "../../assets/portafolio/appQR5.png";
+import appQR6 from "../../assets/portafolio/appQR6.png";
+import appQR7 from "../../assets/portafolio/appQR7.png";
 import appCuaderno from "../../assets/portafolio/appMiCuaderno.png";
 import appCuaderno2 from "../../assets/portafolio/appMiCuaderno2.png";
 import appCuaderno3 from "../../assets/portafolio/appMiCuaderno3.png";
@@ -33,7 +40,6 @@ import appCuaderno6 from "../../assets/portafolio/appMiCuaderno6.png";
 import appCuaderno7 from "../../assets/portafolio/appMiCuaderno7.png";
 import appCuaderno8 from "../../assets/portafolio/appMiCuaderno8.png";
 import appCuaderno9 from "../../assets/portafolio/appMiCuaderno9.png";
-
 
 import CarruselPortafolio from "../Carrusel/CarruselPortafolio";
 
@@ -132,35 +138,73 @@ const Portfolio = () => {
     {
       id: 10,
       src: appTodo1,
-      images: [appTodo1, appTodo2, appTodo3,appTodo4,appTodo5],
+      images: [appTodo1, appTodo2, appTodo3, appTodo4, appTodo5],
       repositorio: "https://github.com/Ema-42/todo-app-back-nest",
       web: "https://todo-app-auth-emanuel.netlify.app/",
       name: "Todo App",
-      tools: ["TypeScript", "React", "TailWInd","NextJs"],
+      tools: ["TypeScript", "React", "TailWInd", "NextJs"],
       resume:
         "Aplicacion de tareas, gestiona todas tus tareas. Autenticacion de usuario y roles (crea y gestiona usuarios)",
     },
     {
       id: 11,
       src: appPOS1,
-      images: [appPOS1,appPOS2,appPOS3,appPOS4,appPOS5,appPOS6,appPOS7,appPOS8],
+      images: [
+        appPOS1,
+        appPOS2,
+        appPOS3,
+        appPOS4,
+        appPOS5,
+        appPOS6,
+        appPOS7,
+        appPOS8,
+      ],
       repositorio: "https://github.com/Ema-42/punto_de_ventas_app_electron",
       web: null,
       name: "Sistema POS - Local de Comida",
-      tools: ["TypeScript", "Electron", "TailWInd","Vue","SQLite"],
+      tools: ["TypeScript", "Electron", "TailWInd", "Vue", "SQLite"],
       resume:
         "Sistema POS para gestionar ventas (con impresion de tickets), inventarios y pedidos en locales de comida.",
     },
     {
       id: 12,
       src: appCuaderno,
-      images: [appCuaderno,appCuaderno2,appCuaderno3,appCuaderno4,appCuaderno5,appCuaderno6,appCuaderno7,appCuaderno8,appCuaderno9],
+      images: [
+        appCuaderno,
+        appCuaderno2,
+        appCuaderno3,
+        appCuaderno4,
+        appCuaderno5,
+        appCuaderno6,
+        appCuaderno7,
+        appCuaderno8,
+        appCuaderno9,
+      ],
       repositorio: "https://github.com/Ema-42/teamboard-client",
       web: "https://teamboard-client.vercel.app/login",
       name: "App tablero de actividades de equipo",
-      tools: ["TypeScript", "React", "TailWInd","Nestjs","Postgresql","OAuth","WebSockets"],
+      tools: [
+        "TypeScript",
+        "React",
+        "TailWInd",
+        "Nestjs",
+        "Postgresql",
+        "OAuth",
+        "WebSockets",
+      ],
       resume:
         "Aplicación de tableros colaborativos con OAuth Google, gestion de tableros y miembros integrantes.",
+    },
+    {
+      id: 13,
+      src: appQR,
+      images: [appQR, appQR2, appQR3, appQR4, appQR5, appQR6, appQR7],
+      repositorio: "https://github.com/Ema-42/generador-qr-front",
+      web: "https://generador-qr-front.vercel.app",
+      name: "App generador de QR con seguimiento",
+      tools: ["React", "TailWInd", "Nestjs", "Postgresql", "Vite"],
+      resume:
+        "Aplicación de generación de códigos QR con seguimiento de escaneos y estadísticas.",
     },
   ];
 
